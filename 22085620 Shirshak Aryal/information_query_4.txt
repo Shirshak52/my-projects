@@ -1,0 +1,11 @@
+SQL> SELECT * FROM Product
+  2  WHERE prod_name LIKE '_a%' AND prod_stock > 50;
+
+   PROD_ID PROD_NAME            PROD_DESC            PROD_CATEGORY        PROD_PRICE PROD_STOCK  VENDOR_ID                                            
+---------- -------------------- -------------------- -------------------- ---------- ---------- ----------                                            
+         2 Galaxy Note 3        Smartphone           Productivity                500        200          2                                            
+         9 Macbook Air          Laptop               Productivity               1000        300          5                                            
+        14 HammerScan           Eye Scanner          Security                    800         70          4                                            
+        15 HammerLock           Smart Doorlock       Security                   1000         60          4                                            
+
+SQL> SPOOL OFF
