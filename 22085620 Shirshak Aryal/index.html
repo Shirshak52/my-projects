@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- META TAGS -->
+	<meta name="description" content="This is an e-commerce website that sells cameras and related equipment.">
+	<meta name="keywords" content="Cameras, Lenses, Tripods, Canon, Nikon, Panasonic, Sony">
+	<meta name="author" content="Rakesh Chaurasiya, Shirshak Aryal, Bardan Shahi, Sujit Yadav">
+
+	<title>Home</title>
+
+	<!-- LINK TO EXTERNAL CSS FILE -->
+	<link rel="stylesheet" href="CSS/style.css" />
+
+	<!-- INTERNAL CSS -->
+	<style>
+		/* SLIDESHOW IMAGES */
+
+		/* div that contains the slideshow of images */
+		.slideshow-img-div {
+			/* border: 3px solid red; */
+
+			display: flex;
+			justify-content: center;
+
+			margin-bottom: 100px;
+
+			height: 400px;
+		}
+
+		/* css for links that enclose the slideshow images */
+		.slideshow-img-div a:hover {
+			transition: 0.1s;
+
+			background-color: black;
+
+			border-radius: 30px;
+
+			opacity: 0.5;
+		}
+
+		/* css for images in slideshow */
+		.slideshow-img-div img {
+			/* border: 5px solid white; */
+			border-radius: 30px;
+		}
+
+
+
+
+
+
+
+
+
+
+		/* HOT PRODUCTS */
+		/* css for hot products container */
+		.hot-products-container {
+			background-color: rgb(68, 68, 68);
+
+			border: 5px solid rgb(68, 68, 68);
+			border-radius: 30px;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			margin-bottom: 100px;
+
+			padding: 0 0 40px 0;
+		}
+
+		.hot-products-container h2 {
+			border-radius: 30px;
+
+			padding: 10px 30px;
+
+			font-family: monospace;
+			font-size: 25px;
+			font-weight: 800;
+
+			color: white;
+		}
+
+
+
+
+
+
+
+
+
+
+		/* CONTAINER FOR INDIVIDUAL PRODUCTS CONTAINERS */
+		.hot-products-images {
+			/* border: 5px solid red; */
+
+			width: 100%;
+
+			display: flex;
+			justify-content: space-between;
+
+			background-color: black;
+
+			padding: 20px 0;
+
+			overflow-x: scroll;
+		}
+
+		/* css for links that enclose the individual products container */
+		.hot-products-images a:hover {
+			transition: 0.1s;
+
+			background-color: black;
+
+			border-radius: 30px;
+
+			opacity: 0.5;
+		}
+
+
+
+
+
+
+
+
+
+
+		/* SCROLLBAR */
+		.hot-products-images::-webkit-scrollbar {
+			height: 15px;
+			width: 100%;
+
+			background-color: white;
+
+			border-radius: 30px;
+		}
+
+		.hot-products-images::-webkit-scrollbar-thumb {
+			background-color: rgb(48, 48, 48);
+			border-radius: 30px;
+		}
+
+		.hot-products-images::-webkit-scrollbar-thumb:hover {
+			background-color: rgb(39, 39, 39);
+		}
+
+
+
+
+
+
+
+
+
+
+		/* INDIVIDUAL PRODUCT CONTAINERS WITH PRODUCT IMAGE AND INFO */
+		.indiv-product-container {
+			border: 2px solid rgb(68, 68, 68);
+			border-radius: 30px;
+
+			background-color: rgb(68, 68, 68);
+
+			padding-bottom: 10px;
+			padding-top: 20px;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			width: 330px;
+
+		}
+
+		.prod-image {
+			/* border: 5px solid red; */
+			border-radius: 30px;
+
+			height: 300px;
+			width: 300px;
+
+			background-color: black;
+		}
+
+
+
+
+
+
+
+
+
+
+		/* PRODUCT DESCRIPTION */
+		.prod-description {
+			/* border: 5px solid dodgerblue; */
+
+			padding: 10px 150px 10px 10px;
+
+			margin: 20px 0;
+
+			background-color: black;
+			color: white;
+
+			height: 250px;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.star-rating-image {
+			height: 30px;
+			width: 170px;
+		}
+
+		.prod-name {
+			font-weight: 800;
+		}
+
+		.price {
+			color: lime;
+		}
+
+		/* css for original price, whose text is strikethrough */
+		.price span {
+			text-decoration: line-through;
+			color: green;
+		}
+
+
+
+
+
+
+
+
+
+
+		/* TARGETS THE 4 BOXES WITH SHORT DESCRIPTIONS OF BLOG, PRODUCTS, RESEARCH, ABOUT USS PAGES */
+		.info-box-container {
+			/* border: 5px solid lime; */
+
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.info-box {
+			border: 2px solid rgb(68, 68, 68);
+			border-radius: 30px;
+
+			padding-bottom: 20px;
+
+			width: 47.5%;
+
+			background-color: rgb(68, 68, 68);
+			color: white;
+
+			margin-top: 40px;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.info-box h2 {
+			/* border: 3px solid blue; */
+
+			font-family: monospace;
+			font-size: 25px;
+			font-weight: 800;
+
+			margin-bottom: -5px;
+		}
+
+		.info-box p {
+			/* border: 1px solid rgb(68, 68, 68); */
+
+			background-color: black;
+
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 500;
+			font-size: 1.2em;
+
+			padding: 40px 30px;
+
+			line-height: 2.5em;
+
+			height: 200px;
+			width: 88%;
+		}
+
+		.info-box a {
+			/* border: 1px solid white; */
+			border-radius: 30px;
+
+			text-decoration: underline;
+
+			align-self: flex-end;
+
+			margin-right: 10px;
+		}
+
+		.info-box a:visited {
+			color: powderblue;
+		}
+
+		.info-box a:hover {
+			background-color: white;
+			color: black;
+
+			border-radius: 30px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header>
+
+		<!-- WEBSITE NAME AND LOGO -->
+		<a href="index.html">
+
+			<div class="website-name-logo-container">
+
+				<img src="Images/logo.png" alt="Logo">
+
+				<h1>KHICHIKKA<sup>&trade;</sup></h1>
+
+			</div>
+
+		</a>
+
+
+
+
+
+		<!-- NAVBAR -->
+		<nav>
+
+			<ul class="navbar">
+
+				<li>
+					<a href="index.html" class="current-page">Home</a>
+				</li>
+
+				<li>
+					<a href="Pages/blog.html">Blog</a>
+				</li>
+
+				<li>
+					<a href="Pages/products.html">Products</a>
+				</li>
+
+				<li>
+					<a href="Pages/research.html">Research</a>
+				</li>
+
+				<li>
+					<a href="Pages/aboutus.html">About Us</a>
+				</li>
+
+			</ul>
+
+		</nav>
+
+
+
+
+
+		<!-- FORM BUTTON -->
+		<div class="form-button">
+
+			<p><a href="Pages/form.html">Feedback Form</a></p>
+
+		</div>
+
+	</header>
+
+
+
+
+
+
+
+
+
+
+	<!-- MAIN SECTION -->
+	<main class="main">
+
+		<!-- IMAGE SLIDESHOW SECTION -->
+		<section class="slideshow-img-div">
+
+			<a href="Pages/products.html">
+				<img src="Images/Homepage-Slideshow/homepage-slideshow-image1.png" alt="image 1" id="img1">
+				<img src="Images/Homepage-Slideshow/homepage-slideshow-image2.png" alt="image 2" id="img2">
+				<img src="Images/Homepage-Slideshow/homepage-slideshow-image3.png" alt="image 3" id="img3">
+			</a>
+
+		</section>
+
+
+
+
+
+
+
+
+
+
+		<br>
+
+
+
+
+
+
+
+
+
+
+		<!-- HOT PRODUCTS SECTION -->
+		<section class="hot-products-container">
+
+			<h2>TOP PRODUCTS</h2>
+
+			<div class="hot-products-images">
+
+				<a href="Pages/products.html">
+
+					<div class="indiv-product-container">
+
+						<img class="prod-image" src="Images/Digicams/Canon-digicam.png" alt="prod1">
+
+						<div class="prod-description">
+
+							<img class="star-rating-image" src="Images/Star-ratings/4-star-rating.png"
+								alt="star rating">
+							<p class="prod-name"><b>Canon EOS R6</b></p>
+							<p class="price"><span>$1999.00</span> $1800.00</p>
+
+						</div>
+
+					</div>
+
+				</a>
+
+
+
+
+
+				<a href="Pages/products.html">
+
+					<div class="indiv-product-container">
+
+						<img class="prod-image" src="Images/Lenses/Nikon-lenses.png" alt="prod2">
+
+						<div class="prod-description">
+
+							<img class="star-rating-image" src="Images/Star-ratings/4-star-rating.png"
+								alt="star rating">
+							<p class="prod-name"><b>Nikon AF-S 24-70mm f/2.8E ED VR Lens</b></p>
+							<p class="price"><span>$2300.00</span> $2200.00</p>
+
+						</div>
+
+					</div>
+
+				</a>
+
+
+
+
+
+				<a href="Pages/products.html">
+
+					<div class="indiv-product-container">
+
+						<img class="prod-image" src="Images/Accessories/Aputure-light-dome-ii.png" alt="prod3">
+
+						<div class="prod-description">
+
+							<img class="star-rating-image" src="Images/Star-ratings/5-star-rating.png"
+								alt="star rating">
+							<p class="prod-name"><b>Aputure LightDome II</b></p>
+							<p class="price"><span>$230.00</span> $200.00</p>
+
+						</div>
+
+					</div>
+
+				</a>
+
+
+
+
+
+				<a href="Pages/products.html">
+
+					<div class="indiv-product-container">
+
+						<img class="prod-image" src="Images/Vidcams/Gopro-hero10-black.png" alt="prod4">
+
+						<div class="prod-description">
+
+							<img class="star-rating-image" src="Images/Star-ratings/4-star-rating.png"
+								alt="star rating">
+							<p class="prod-name"><b>GoPro HERO10 Black</b></p>
+							<p class="price"><span>$500.00</span> $450.00</p>
+
+						</div>
+
+					</div>
+
+				</a>
+
+
+
+
+
+				<a href="Pages/products.html">
+
+					<div class="indiv-product-container">
+
+						<img class="prod-image" src="Images/Digicams/Lumix-digicam.png" alt="prod4">
+
+						<div class="prod-description">
+
+							<img class="star-rating-image" src="Images/Star-ratings/4-star-rating.png"
+								alt="star rating">
+							<p class="prod-name"><b>Panasonic Lumix S 24-105mm f/4 Macro O.I.S. Lens</b></p>
+							<p class="price"><span>$1200.00</span> $1000.00</p>
+
+						</div>
+
+					</div>
+
+				</a>
+
+
+
+
+
+				<a href="Pages/products.html">
+
+					<div class="indiv-product-container">
+
+						<img class="prod-image" src="Images/Vidcams/Sony-fdr-ax53-handycam.png" alt="prod4">
+
+						<div class="prod-description">
+
+							<img class="star-rating-image" src="Images/Star-ratings/5-star-rating.png"
+								alt="star rating">
+							<p class="prod-name"><b>Sony FDR AX53 Handycam&reg;</b></p>
+							<p class="price"><span>$2200.00</span> $2100.00</p>
+
+						</div>
+
+					</div>
+
+				</a>
+
+			</div>
+
+		</section>
+
+
+
+
+
+
+
+
+
+
+		<!-- INFO BOXES -->
+		<section class="info-box-container">
+
+			<div class="info-box">
+
+				<h2>BLOG</h2>
+
+				<p>
+					Technology has become a big thing in recent times. It can serve both as a boon as well as a
+					bane, depending on how you use it. Click the link below to see more.
+				</p>
+
+				<a href="Pages/blog.html">Show more</a>
+
+			</div>
+
+
+
+
+
+
+
+
+
+			<div class="info-box">
+
+				<h2>PRODUCTS</h2>
+
+				<p>
+					We sell trusted products from reputed companies. Anything you're looking for, be it cameras,
+					lenses, tripods and what not, we have you covered.
+				</p>
+
+				<a href="Pages/products.html">Show more</a>
+
+			</div>
+
+
+
+
+
+
+		</section>
+
+
+		<section class="info-box-container">
+
+			<div class="info-box">
+
+				<h2>RESEARCH</h2>
+
+				<p>
+					The design of our website is the result of ideas and inspiration from a number of other
+					well-designed websites. Some credit does go to them. Click the link below to see what websites
+					we were inspired by.
+				</p>
+
+				<a href="Pages/research.html">Show more</a>
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+			<div class="info-box">
+
+				<h2>ABOUT US</h2>
+
+				<p>
+					This website is not the outcome of a single day of work, nor is it from the efforts of one
+					single person. Have a look at the team behind the development of this website by clicking the
+					link below.
+				</p>
+
+				<a href="Pages/aboutus.html">Show more</a>
+
+			</div>
+
+		</section>
+	</main>
+
+
+
+
+
+
+
+
+
+
+	<hr>
+
+
+
+
+
+
+
+
+
+
+	<!-- FOOTER -->
+	<footer>
+
+		<div class="footer-links-container">
+
+			<a href="facebook.com" target="_blank"><img src="Images/Footer/facebook-logo.png" alt="fb-logo"></a>
+			<a href="instagram.com" target="_blank"><img src="Images/Footer/instagram-logo.jpeg" alt="ig-logo"></a>
+			<a href="linkedin.com" target="_blank"><img src="Images/Footer/linkedin-logo.png" alt="linkedin-logo"></a>
+
+		</div>
+
+		<p class="footer-text">&copy; Khichikka<sup>TM</sup> 2023</p>
+
+	</footer>
+
+
+
+
+
+
+
+
+
+
+	<!-- JavaScript -->
+	<script>
+
+		setInterval(imageSlideshow, 1000);
+
+		var img1 = document.getElementById('img1');
+		var img2 = document.getElementById('img2');
+		var img3 = document.getElementById('img3');
+
+
+		var images = [img1, img2, img3];
+
+		var currentIndex = 0;
+
+		img1.style.display = "none";
+		img3.style.display = "none";
+		img2.style.display = "block";
+
+
+		function imageSlideshow() {
+
+			images[currentIndex].style.display = 'none';
+
+			currentIndex = (currentIndex + 1) % images.length;
+			/*This updates currentIndex from 0 to 1, and 1 mod 3 is 1, so img 2 is shown; 
+			same for img 3 and img 1, but when currentIndex is 3, 3 mod 3 is 0 so img1 is shown*/
+
+			images[currentIndex].style.display = 'block';
+
+		}
+
+	</script>
+
+</body>
+
+</html>

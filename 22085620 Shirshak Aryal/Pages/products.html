@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- META TAGS -->
+    <meta name="description" content=" This is an e-commerce website that sells cameras and related equipment.">
+    <meta name="keywords" content="Cameras, Lenses, Tripods, Canon, Nikon, Panasonic, Sony">
+    <meta name="author" content="Rakesh Chaurasiya, Shirshak Aryal, Bardan Shahi, Sujit Yadav">
+
+    <title>Products</title>
+
+    <!-- LINK TO EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <!-- LINK TO EXTERNAL JavaScript FILE -->
+    <script src="../JS/script.js"></script>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        /* PRODUCT CATEGORY CONTAINERS */
+        .digital-cameras-container,
+        .video-cameras-container,
+        .lenses-container,
+        .accessories-container {
+            background-color: rgb(68, 68, 68);
+
+            border: 5px solid rgb(68, 68, 68);
+            border-radius: 30px;
+
+            margin-bottom: 100px;
+            padding: 0 0 40px 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* css for 'show more' link in every product category container*/
+        .digital-cameras-container a,
+        .video-cameras-container a,
+        .lenses-container a,
+        .accessories-container a {
+            align-self: flex-end;
+
+            margin-right: 30px;
+            margin-top: 20px;
+            margin-bottom: -20px;
+        }
+
+        /* css for heading of every product category container */
+        .digital-cameras-container h2,
+        .video-cameras-container h2,
+        .accessories-container h2,
+        .lenses-container h2 {
+            align-self: center;
+
+            /* border: 1px solid white; */
+            border-radius: 30px;
+
+            padding: 10px 30px;
+
+            font-family: monospace;
+            font-size: 25px;
+            font-weight: 800;
+
+            color: white;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* CONTAINER FOR INDIVIDUAL PRODUCTS CONTAINERS*/
+        /* css for images of every product category section */
+        .digital-cameras-images,
+        .video-cameras-images,
+        .accessories-images,
+        .lenses-images {
+            /* border: 5px solid red; */
+
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+
+            background-color: black;
+
+            padding: 20px 0;
+
+            overflow-x: scroll;
+        }
+
+        /* css for links that enclose individual products containers themselves */
+        .digital-cameras-images a:hover,
+        .video-cameras-images a:hover,
+        .lenses-images a:hover,
+        .accessories-images a:hover {
+            transition: 0.2s;
+            background-color: black;
+            opacity: 0.5;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        /* INDIVIDUAL PRODUCT CONTAINERS */
+        .indiv-product-container {
+            background-color: rgb(68, 68, 68);
+
+            border: 2px solid rgb(68, 68, 68);
+            border-radius: 30px;
+
+            padding-bottom: 10px;
+            padding-top: 20px;
+
+            margin-top: -20px;
+            margin-bottom: 20px;
+            margin-right: -30px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 330px;
+        }
+
+        /* css for product image */
+        .prod-image {
+            /* border: 5px solid red; */
+
+            height: 300px;
+            width: 300px;
+
+            background-color: black;
+
+            border-radius: 30px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* SCROLLBAR */
+        .digital-cameras-images::-webkit-scrollbar,
+        .video-cameras-images::-webkit-scrollbar,
+        .accessories-images::-webkit-scrollbar,
+        .lenses-images::-webkit-scrollbar {
+            height: 15px;
+            width: 100%;
+
+            background-color: white;
+
+            border-radius: 30px;
+
+        }
+
+        /* css for thumb of scrollbar */
+        .digital-cameras-images::-webkit-scrollbar-thumb,
+        .video-cameras-images::-webkit-scrollbar-thumb,
+        .accessories-images::-webkit-scrollbar-thumb,
+        .lenses-images::-webkit-scrollbar-thumb {
+            background-color: rgb(48, 48, 48);
+            border-radius: 30px;
+
+        }
+
+        /* css for hover effect on thumb of scrollbar */
+        .digital-cameras-images::-webkit-scrollbar-thumb:hover,
+        .video-cameras-images::-webkit-scrollbar-thumb:hover,
+        .accessories-images::-webkit-scrollbar-thumb:hover,
+        .lenses-images::-webkit-scrollbar-thumb:hover {
+            background-color: rgb(39, 39, 39);
+        }
+
+
+
+
+
+
+
+
+
+
+        /* PRODUCT DESCRIPTION */
+        /* css for product description */
+        .prod-description {
+            /* border: 5px solid dodgerblue; */
+            padding: 10px 150px 10px 10px;
+            margin: 20px 0;
+
+            background-color: black;
+            color: white;
+
+            height: 300px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            font-weight: 800;
+            font-family: monospace;
+            font-size: 20px;
+        }
+
+
+
+
+
+        /* css for add to cart buttons */
+        .prod-description button {
+            background-color: black;
+            color: white;
+
+            border: 1px solid white;
+            border-radius: 30px;
+
+            padding: 10px 30px;
+
+            font-size: 15px;
+        }
+
+        .prod-description button:hover {
+            color: black;
+            background-color: white;
+        }
+
+
+
+
+
+        .star-rating-image {
+            height: 30px;
+            width: 170px;
+        }
+
+        .prod-name {
+            font-weight: 800;
+        }
+
+        .price {
+            color: lime;
+        }
+
+        /* css for original price, whose text is strikethrough */
+        .price span {
+            text-decoration: line-through;
+            color: green;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* SECTION LINKS */
+        /* css for the div that contains links to go back to a specific section of this page */
+        .section-links {
+            display: flex;
+            justify-content: space-evenly;
+
+            margin-top: -20px;
+            margin-bottom: 70px;
+        }
+
+        /* css to make scroling smooth when section links are clicked */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+
+        <!-- WEBSITE NAME AND LOGO -->
+        <a href="../index.html">
+
+            <div class="website-name-logo-container">
+
+                <img src="../Images/logo.png" alt="Logo">
+
+                <h1>KHICHIKKA<sup>&trade;</sup></h1>
+
+            </div>
+
+        </a>
+
+
+
+
+
+
+
+
+
+
+        <!-- NAVBAR -->
+        <nav>
+            <ul class="navbar">
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+
+                <li>
+                    <a href="products.html" class="current-page">Products</a>
+                </li>
+
+                <li>
+                    <a href="research.html">Research</a>
+                </li>
+
+                <li>
+                    <a href="aboutus.html">About Us</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+
+
+
+
+
+
+
+
+        <!-- FORM BUTTON -->
+        <div class="form-button">
+
+            <p><a href="form.html">Feedback Form</a></p>
+
+        </div>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+    <!-- MAIN SECTION -->
+    <main class="main">
+
+        <!-- DIGITAL CAMERAS -->
+        <section class="digital-cameras-container" id="digicams">
+
+            <h2>DIGITAL CAMERAS</h2>
+
+            <div class="digital-cameras-images">
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Digicams/Canon-digicam.png" alt="prod1">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Canon EOS R6</b></p>
+
+                            <p class="price"><span>$1999.00</span> $1800.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container" id="digicam-2">
+
+                        <img class="prod-image" src="../Images/Digicams/Lumix-digicam.png" alt="prod4">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Panasonic Lumix S 24-105mm f/4 Macro O.I.S. Lens</b></p>
+
+                            <p class="price"><span>$1200.00</span> $1000.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container" id="digicam-3">
+
+                        <img class="prod-image" src="../Images/Digicams/Nikon-digicam-3.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/3-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Nikon COOLPIX P950</b></p>
+
+                            <p class="price"><span>$1400.00</span> $1250.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container" id="digicam-4">
+
+                        <img class="prod-image" src="../Images/Digicams/Fujifilm-digicam.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/5-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Fujifilm Leica Q2</b></p>
+
+                            <p class="price"><span>$5000.00</span> $4500.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container" id="digicam-5">
+
+                        <img class="prod-image" src="../Images/Digicams/Sony-digicam.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Sony Cyber-shot DSC-RX10 IV</b></p>
+
+                            <p class="price"><span>$3300.00</span> $2800.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+            <a href="products-sub.html">Show More</a>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!-- SECTION LINKS -->
+        <div class="section-links">
+
+            <a href="#digicams">Go To Digital Cameras</a>
+            <a href="#vidcams">Go To Video Cameras</a>
+            <a href="#accessories">Go To Accessories</a>
+            <a href="#lenses">Go To Lenses</a>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- VIDEO CAMERAS -->
+        <section class="video-cameras-container" id="vidcams">
+
+            <h2>VIDEO CAMERAS</h2>
+
+            <div class="video-cameras-images">
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Vidcams/Canon-XA11.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Canon XA40 HD</b></p>
+
+                            <p class="price"><span>$1400.00</span> $1320.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Vidcams/Sony-cinema-line-fx6-body.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/3-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Sony FX6 Full Frame Cinema Camera (Body Only)</b></p>
+
+                            <p class="price"><span>$6500.00</span> $6000.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Vidcams/Gopro-hero11-black.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/5-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>GoPro HERO11 Black</b></p>
+
+                            <p class="price"><span>$750.00</span> $700.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Vidcams/Panasonic-hc-v180.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Panasonic HC-V180 HD</b></p>
+
+                            <p class="price"><span>$450.00</span> $400.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Vidcams/blackmagic-pocket-cinema.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/5-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Blackmagic Pocket Cinema</b></p>
+
+                            <p class="price"><span>$1300.00</span> $1200.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+            <a href="products-sub.html">Show More</a>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!-- SECTION LINKS -->
+        <div class="section-links">
+
+            <a href="#digicams">Go To Digital Cameras</a>
+            <a href="#vidcams">Go To Video Cameras</a>
+            <a href="#accessories">Go To Accessories</a>
+            <a href="#lenses">Go To Lenses</a>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- ACCESSORIES -->
+        <section class="accessories-container" id="accessories">
+
+            <h2>ACCESSORIES</h2>
+
+            <div class="accessories-images">
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Accessories/Aputure-light-dome-ii.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Aputure LightDome II</b></p>
+
+                            <p class="price"><span>$230.00</span> $200.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Accessories/Sony-xqd-gseries-64gb-memorycard.png"
+                            alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Sony XQD GSeries 64GB Memory Card</b></p>
+
+                            <p class="price"><span>$150.00</span> $100.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Accessories/Rode-videomic-go-ii.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>RODE VideoMic Go II</b></p>
+
+                            <p class="price"><span>$100.00</span> $80.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Accessories/Sony-np-fw50-battery.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/5-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Sony NP-FW50 Battery</b></p>
+
+                            <p class="price"><span>$80.00</span> $50.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Accessories/Xphotos-lens-addon.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/5-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Godox XProC TTL Wireless Flash</b></p>
+
+                            <p class="price"><span>$350.00</span> $300.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+            <a href="products-sub.html">Show More</a>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!-- SECTION LINKS -->
+        <div class="section-links">
+
+            <a href="#digicams">Go To Digital Cameras</a>
+            <a href="#vidcams">Go To Video Cameras</a>
+            <a href="#accessories">Go To Accessories</a>
+            <a href="#lenses">Go To Lenses</a>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!---LENSES---->
+        <section class="lenses-container" id="lenses">
+
+            <h2>LENSES</h2>
+
+            <div class="lenses-images">
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Lenses/Canon-lenses.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/5-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Canon EF-EOS R Mount Adapter</b></p>
+
+                            <p class="price"><span>$120.00</span> $90.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Lenses/Fujifilm-lenses.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Sony E PZ 18-105mm F4 G OSS</b></p>
+
+                            <p class="price"><span>$600.00</span> $540.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Lenses/EPC-lenses.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/5-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Fujifilm Fujinon XF 35mm f/2.0 R WR</b></p>
+
+                            <p class="price"><span>$400.00</span> $380.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Lenses/Zeiss-lenses.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Sony Sonnar T* FE 55mm F/1.8 ZA</b></p>
+
+                            <p class="price"><span>$550.00</span> $500.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+
+
+                <a href="products-sub.html">
+
+                    <div class="indiv-product-container">
+
+                        <img class="prod-image" src="../Images/Lenses/Nikon-lenses-3.png" alt="prod2">
+
+                        <div class="prod-description">
+
+                            <img class="star-rating-image" src="../Images/Star-ratings/5-star-rating.png"
+                                alt="star rating">
+
+                            <p class="prod-name"><b>Nikon FTZ Mount Adapter</b></p>
+
+                            <p class="price"><span>$100.00</span> $80.00</p>
+
+                            <button onclick="addToCart()">Add To Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+            <a href="products-lenses.html">Show more</a>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!-- SECTION LINKS -->
+        <div class="section-links">
+
+            <a href="#digicams">Go To Digital Cameras</a>
+            <a href="#vidcams">Go To Video Cameras</a>
+            <a href="#accessories">Go To Accessories</a>
+            <a href="#lenses">Go To Lenses</a>
+
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <hr>
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-links-container">
+
+            <a href="https://www.facebook.com" target="_blank"><img src="../Images/Footer/facebook-logo.png"
+                    alt="fb-logo">
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank"><img src="../Images/Footer/instagram-logo.jpeg"
+                    alt="ig-logo">
+            </a>
+
+            <a href="https://www.linkedin.com" target="_blank"><img src="../Images/Footer/linkedin-logo.png"
+                    alt="linkedin-logo">
+            </a>
+
+        </div>
+
+        <p class="footer-text">&copy; Khichikka<sup>TM</sup> 2023</p>
+
+    </footer>
+
+</body>
+
+</html>

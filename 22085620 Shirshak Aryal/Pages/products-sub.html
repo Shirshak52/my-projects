@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- META TAGS -->
+    <meta name="description" content=" This is an e-commerce website that sells cameras and related equipment.">
+    <meta name="keywords" content="Cameras, Lenses, Tripods, Canon, Nikon, Panasonic, Sony">
+    <meta name="author" content="Rakesh Chaurasiya, Shirshak Aryal, Bardan Shahi, Sujit Yadav">
+
+    <title>Canon EOS R6</title>
+
+    <!-- LINK TO EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <!-- LINK TO EXTERNAL JavaScript FILE -->
+    <script src="../JS/script.js"></script>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        /* PRODUCT CATEGORY CONTAINER */
+        .digital-cameras-container {
+            /* border: 1px solid red; */
+            border-radius: 30px;
+
+            background-color: rgb(68, 68, 68);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-bottom: 100px;
+            margin-top: 100px;
+
+            padding: 0 0 40px 0;
+        }
+
+        .digital-cameras-container h2 {
+            /* border: 1px solid white; */
+            border-radius: 30px;
+
+            padding: 10px 30px;
+
+            font-family: monospace;
+            font-size: 25px;
+            font-weight: 800;
+
+            color: white;
+
+            align-self: center;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* CONTAINERS FOR INDIVIDUAL PRODUCTS CONTAINERS */
+        .digital-cameras-images {
+            /* border: 5px solid red; */
+
+            width: 100%;
+
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            background-color: black;
+
+            padding: 20px 0;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* PRODUCT ELABORATION CONTAINER */
+        .prod-elaboration {
+            /* border: 1px solid white; */
+            border-radius: 30px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            background-color: rgb(68, 68, 68);
+            color: white;
+
+            padding-bottom: 30px;
+        }
+
+        .prod-elaboration h3 {
+            border: 1px solid white;
+            border-radius: 30px;
+
+            padding: 10px 30px;
+
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+
+
+
+
+        /* TEXT PART OF PRODUCT ELABORATION */
+        .prod-elaboration-text {
+            padding: 20px 10px;
+
+            background-color: black;
+
+            font-family: sans-serif;
+
+            line-height: 1.5em;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* PRODUCT SPECS */
+        .specs {
+            margin: 60px 0;
+        }
+
+        .specs p {
+            font-weight: 800;
+
+            padding-left: 20px;
+        }
+
+        .specs ul li {
+            font-weight: 700;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* INDIVIDUAL PRODUCT CONTAINERS*/
+        .indiv-product-container {
+            /* border: 2px solid white; */
+            border-radius: 30px;
+
+            background-color: rgb(68, 68, 68);
+
+            padding-bottom: 10px;
+            padding-top: 20px;
+
+            margin-left: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: center;
+        }
+
+        /* css for product image */
+        .prod-image {
+            /* border: 5px solid red; */
+            border-radius: 30px;
+
+            height: 300px;
+            width: 300px;
+
+            background-color: black;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* PRODUCT DESCRIPTION */
+        .prod-description {
+            /* border: 5px solid dodgerblue; */
+
+            padding: 10px 150px 10px 10px;
+
+            margin: 20px 0;
+
+            background-color: black;
+            color: white;
+
+            align-self: flex-start;
+
+            font-weight: 800;
+            font-family: monospace;
+            font-size: 20px;
+
+            height: 300px;
+        }
+
+
+
+
+
+        /* css for add to cart buttons */
+        .prod-description button {
+            border: 1px solid white;
+            border-radius: 30px;
+
+            background-color: black;
+            color: white;
+
+            padding: 10px 30px;
+
+            font-size: 15px;
+        }
+
+        .prod-description button:hover {
+            color: black;
+            background-color: white;
+        }
+
+
+
+
+
+        .star-rating-image {
+            height: 30px;
+            width: 170px;
+        }
+
+        .prod-name {
+            font-weight: 800;
+        }
+
+        .price {
+            color: lime;
+        }
+
+        /* css for original price, whose text is strikethrough */
+        .price span {
+            text-decoration: line-through;
+            color: green;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* CUSTOMER REVIEWS */
+        .customer-reviews {
+            margin-top: 25px;
+
+            padding-left: 20px;
+        }
+
+        .customer-reviews p {
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+
+        <!-- WEBSITE NAME AND LOGO -->
+        <a href="../index.html">
+
+            <div class="website-name-logo-container">
+
+                <img src="../Images/logo.png" alt="Logo">
+
+                <h1>KHICHIKKA<sup>&trade;</sup></h1>
+
+            </div>
+
+        </a>
+
+
+
+
+
+
+
+
+
+
+        <!-- NAVBAR -->
+        <nav>
+
+            <ul class="navbar">
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+
+                <li>
+                    <a href="products.html" class="current-page">Products</a>
+                </li>
+
+                <li>
+                    <a href="research.html">Research</a>
+                </li>
+
+                <li>
+                    <a href="aboutus.html">About Us</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+
+
+
+
+
+
+
+
+        <!-- FORM BUTTON -->
+        <div class="form-button">
+
+            <p><a href="form.html">Feedback Form</a></p>
+
+        </div>
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!-- MAIN SECTION -->
+    <main class="main">
+
+        <section class="digital-cameras-container">
+
+            <h2>DIGITAL CAMERAS</h2>
+
+            <div class="digital-cameras-images">
+
+                <div class="indiv-product-container">
+
+                    <img class="prod-image" src="../Images/Digicams/Canon-digicam.png" alt="prod1">
+
+                    <div class="prod-description">
+
+                        <img class="star-rating-image" src="../Images/Star-ratings/4-star-rating.png" alt="star rating">
+
+                        <p class="prod-name"><b>Canon EOS R6</b></p>
+
+                        <p class="price"><span>$1999.00</span> $1800.00</p>
+
+                        <button onclick="addToCart()">Add To Cart</button>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="prod-elaboration">
+
+                    <h3>Canon EOS R6</h3>
+
+                    <div class="prod-elaboration-text">
+
+                        <p style="padding: 0 20px; font-size: 20px; font-weight: 700;">Designed to meet the demands
+                            of
+                            both photographers
+                            and video content
+                            creators who want a
+                            strong and versatile camera to keep up with their active lives. It can go from
+                            photographing
+                            high-speed action sports to filming 4K cinematic video with ease thanks to its
+                            high-performance CMOS sensor and DIGIC X image processor.
+                        </p>
+
+                        <div class="specs">
+
+                            <p>SPECS</p>
+
+                            <ul>
+
+                                <li>High Image Quality featuring a 20 Megapixel Full-frame CMOS Sensor.</li>
+
+                                <li>DIGIC X Image Processor with an ISO range of 100-102400; Expandable to 204800.
+                                </li>
+
+                                <li>High-Speed Continuous Shooting of up to 12 fps with Mechanical Shutter and up to
+                                    20
+                                    fps Electronic (Silent) Shutter.
+                                </li>
+
+                                <li>Dual Pixel CMOS AF II covering Approx.100% Area with 1,053 AF Areas.</li>
+                                <li>Subject tracking of People and Animals* using Deep Learning Technology.</li>
+
+                                <li>4K up 60fps, 1080p up to 120fps^^^ 10-bit 4:2:2 with Canon Log or HDR PQ,
+                                    Internal
+                                    Recording
+                                    in all Formats, with Auto Focus.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="customer-reviews">
+
+                            <p style="font-style: normal; font-weight: 800; font-size: 15px;">CUSTOMER REVIEWS:</p>
+
+                            <p>"A must-buy for every photography enthusiast. Amazing picture quality." - Anonymous</p>
+
+                            <p>"Its ability to capture high quality images in almost ay ligting condition is
+                                remarkable." - Anonymous
+                            </p>
+
+                            <p>"The camera has a compact feel and size, which makes it feel so much more premium." -
+                                Anoymous
+                            </p>
+
+                            <p>"Its controls are so intuitive! Canon has outdone themselves." - Anonymous</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <hr>
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-links-container">
+
+            <a href="https://www.facebook.com" target="_blank"><img src="../Images/Footer/facebook-logo.png"
+                    alt="fb-logo">
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank"><img src="../Images/Footer/instagram-logo.jpeg"
+                    alt="ig-logo">
+            </a>
+
+            <a href="https://www.linkedin.com" target="_blank"><img src="../Images/Footer/linkedin-logo.png"
+                    alt="linkedin-logo">
+            </a>
+
+        </div>
+
+        <p class="footer-text">&copy; Khichikka<sup>TM</sup> 2023</p>
+
+    </footer>
+
+</body>
+
+</html>
