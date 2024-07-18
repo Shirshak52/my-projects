@@ -1,0 +1,30 @@
+SQL> SELECT c.cust_ID, c.cust_name, co.ord_ID, o.ord_date FROM
+  2  Customer c LEFT JOIN Customer_Order co ON c.cust_ID = co.cust_ID
+  3  LEFT JOIN "ORDER" o ON o.ord_ID = co.ord_ID
+  4  ORDER BY co.ord_ID, c.cust_ID;
+
+   CUST_ID CUST_NAME                ORD_ID ORD_DATE                                                                                                   
+---------- -------------------- ---------- ---------                                                                                                  
+         1 Steve Rogers                  1 02-MAY-23                                                                                                  
+         1 Steve Rogers                  2 23-JUN-23                                                                                                  
+         4 Peter Parker                  3 31-DEC-23                                                                                                  
+         5 Matt Murdock                  4 05-OCT-23                                                                                                  
+         7 Thomas Edison                 5 25-MAY-23                                                                                                  
+         5 Matt Murdock                  6 27-AUG-22                                                                                                  
+         8 Maxwell Dillon                7 31-JUL-23                                                                                                  
+         8 Maxwell Dillon                8 16-MAR-23                                                                                                  
+         8 Maxwell Dillon                9 14-MAR-23                                                                                                  
+         9 Peter Quill                  10 22-MAY-23                                                                                                  
+         9 Peter Quill                  11 01-APR-22                                                                                                  
+         9 Peter Quill                  12 14-MAY-23                                                                                                  
+         9 Peter Quill                  13 16-MAR-23                                                                                                  
+         9 Peter Quill                  14 23-MAY-23                                                                                                  
+         9 Peter Quill                  15 02-NOV-22                                                                                                  
+         2 Tony Stark                                                                                                                                 
+         3 Bruce Banner                                                                                                                               
+         6 Lucifer Morningstar                                                                                                                        
+        10 Benjamin Tennyson                                                                                                                          
+
+19 rows selected.
+
+SQL> SPOOL OFF

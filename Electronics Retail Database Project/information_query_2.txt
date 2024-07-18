@@ -1,0 +1,12 @@
+SQL> SELECT * FROM "ORDER" NATURAL JOIN Order_Product
+  2  WHERE prod_ID = 2 AND
+  3  ord_date BETWEEN TO_DATE('01-05-2023', 'DD-MM-YY') AND TO_DATE('28-05-2023', 'DD-MM-YY');
+
+    ORD_ID ORD_DATE     PROD_ID  ORDER_QTY                                                                                                            
+---------- --------- ---------- ----------                                                                                                            
+         1 02-MAY-23          2          5                                                                                                            
+        10 22-MAY-23          2         35                                                                                                            
+        12 14-MAY-23          2          1                                                                                                            
+        14 23-MAY-23          2         30                                                                                                            
+
+SQL> SPOOL OFF
